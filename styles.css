@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c8b09c, #8e735a);
+  min-height: 100vh;
+  color: #3e2723;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  background-color: #fdfcfb;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #d7ccc8;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4e342e;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #5d4037;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  background-color: #f5eee8;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #eaddcf;
+}
+
+input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+  accent-color: #795548;
+}
+
+.add-task {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.add-task input {
+  flex: 1 1 300px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #bfa588;
+  background-color: #fffdfb;
+  color: #5d4037;
+  transition: border 0.2s ease;
+}
+
+.add-task input:focus {
+  border-color: #8d6e63;
+  outline: none;
+}
+
+.add-task input::placeholder {
+  color: #a1887f;
+}
+
+.add-task button {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #795548, #5d4037);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-task button:hover {
+  background: linear-gradient(135deg, #6d4c41, #4e342e);
+}
+
+button {
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 24px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6d4c41, #4e342e);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5d4037, #3e2723);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .add-task {
+    flex-direction: column;
+  }
+
+  .add-task input {
+    width: 100%;
+  }
+
+  .add-task button {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
