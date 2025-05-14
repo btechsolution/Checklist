@@ -6,111 +6,178 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c8b09c, #8e735a);
+  min-height: 100vh;
+  color: #3e2723;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
 }
 
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fdfcfb;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #d7ccc8;
+  transition: all 0.3s ease;
 }
 
-h1, h2 {
+h1 {
+  font-size: 2rem;
   text-align: center;
-  color: #333;
+  margin-bottom: 30px;
+  color: #4e342e;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #5d4037;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
-  margin-bottom: 10px;
-  font-size: 18px;
   display: flex;
   align-items: center;
+  background-color: #f5eee8;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #eaddcf;
 }
 
 input[type="checkbox"] {
-  margin-right: 10px;
+  margin-right: 12px;
   transform: scale(1.2);
+  accent-color: #795548;
 }
 
 .add-task {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 .add-task input {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  max-width: 100%;
-  box-sizing: border-box;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 500px; /* Garantindo que o campo de texto não fique muito largo */
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #bfa588;
+  background-color: #fffdfb;
+  color: #5d4037;
+  transition: border 0.2s ease;
+  height: 35px; /* Altura ajustada */
+}
+
+.add-task input:focus {
+  border-color: #8d6e63;
+  outline: none;
+}
+
+.add-task input::placeholder {
+  color: #a1887f;
+  font-size: 0.75rem;
+  line-height: 1.2;
 }
 
 .add-task button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  border: none;
+  flex-shrink: 0;
+  padding: 8px 20px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #795548, #5d4037);
   color: white;
-  border-radius: 5px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.3s;
+  width: 100%; /* Garantindo que o botão ocupe toda a largura no celular */
 }
 
 .add-task button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #6d4c41, #4e342e);
 }
 
 button {
-  margin-top: 20px;
-  margin-right: 10px;
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #4CAF50;
+  display: block;
+  margin: 40px auto 0;
+  padding: 14px 24px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6d4c41, #4e342e);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #5d4037, #3e2723);
 }
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 480px) {
-  .container {
+  body {
     padding: 20px;
-    margin: 20px;
+  }
+
+  .container {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .add-task {
+    flex-direction: column;
   }
 
   .add-task input {
-    font-size: 14px;
-    padding: 8px;
-    width: calc(100% - 120px); /* Ajusta o input para não ficar muito grande */
+    width: 100%; /* Ajuste para o campo de texto ocupar toda a largura disponível */
+    padding: 6px 12px; /* Menor padding */
+    height: 35px; /* Ajustando a altura do input */
+    max-width: 100%; /* Garantindo que o input não fique largo */
+  }
+
+  .add-task input::placeholder {
+    font-size: 0.75rem; /* Tamanho ajustado para o placeholder */
+    line-height: 1.2; /* Menor altura de linha */
   }
 
   .add-task button {
-    font-size: 14px;
-    padding: 8px 12px;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 0;
   }
 
   button {
-    padding: 8px 12px;
-    font-size: 14px;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
   }
 }
