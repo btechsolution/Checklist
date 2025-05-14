@@ -93,9 +93,15 @@ button:hover {
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
   .add-task input {
     font-size: 14px;
     padding: 8px;
+    width: calc(100% - 120px); /* Ajusta o input para não ficar muito grande */
   }
 
   .add-task button {
@@ -103,7 +109,8 @@ button:hover {
     padding: 8px 12px;
   }
 
-  .container {
-    padding: 20px;
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
   }
 }
